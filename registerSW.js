@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/apiclima-vue/sw.js', { scope: '/apiclima-vue/' })})}
