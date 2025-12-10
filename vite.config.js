@@ -11,9 +11,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'icons/*.png'],
       manifest: {
-        name: 'Weather App',
-        short_name: 'Weather',
-        description: 'Professional weather forecast application',
+        name: 'api clima vue',
+        short_name: 'api clima vue',
+        description: 'vue3 + meteor api',
         theme_color: '#9333ea',
         background_color: '#ffffff',
         display: 'standalone',
