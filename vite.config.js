@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/apiclima-vue2/',
+  base: '/apiclima-vue/',
   plugins: [
     vue(),
     VitePWA({
@@ -18,8 +18,8 @@ export default defineConfig({
         background_color: '#ffffff',
         display: 'standalone',
         orientation: 'portrait',
-        scope: '/apiclima-vue2/',
-        start_url: '/apiclima-vue2/',
+        scope: '/apiclima-vue/',
+        start_url: '/apiclima-vue/',
         icons: [
           {
             src: 'icons/icon-192x192.png',
