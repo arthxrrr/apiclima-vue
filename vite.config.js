@@ -13,7 +13,7 @@ export default defineConfig({
       manifest: {
         name: 'api clima vue',
         short_name: 'api clima vue',
-        description: 'vue3 + meteor api',
+        description: 'vue.js- + meteor api',
         theme_color: '#9333ea',
         background_color: '#ffffff',
         display: 'standalone',
