@@ -8,84 +8,133 @@
   }
 
   body {
-    @apply text-slate-700 bg-slate-50 transition-colors duration-300;
+    @apply text-slate-800 bg-slate-50 transition-colors duration-300;
   }
 
   html.dark body {
-    @apply bg-slate-900 text-slate-200;
+    @apply bg-slate-950 text-slate-100;
   }
 
   html.dark .card,
   html.dark .card-main,
   html.dark .bg-white {
-    @apply bg-slate-800 border-slate-700 text-slate-200;
+    @apply bg-slate-900 border-slate-800 text-slate-100;
     background-image: none;
   }
 
   html.dark .text-slate-800,
   html.dark .text-slate-700 {
-    color: #e2e8f0;
-    /* slate-200 */
+    color: #f1f5f9;
+    /* slate-100 */
   }
 
   html.dark .text-slate-500,
   html.dark .text-slate-400 {
     color: #94a3b8;
-
+    /* slate-400 */
   }
 
   html.dark .bg-slate-50,
   html.dark .bg-slate-100 {
-    background-color: #1e293b;
+    background-color: #0f172a;
+    /* slate-900 */
   }
 
   ::-webkit-scrollbar {
-    @apply w-1.5 h-1.5;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-transparent;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-300 rounded-full hover:bg-slate-400;
+    background-color: #cbd5e1;
+    /* slate-300 */
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+    /* slate-400 */
+  }
+
+  /* Global Overrides to force Corporate Style without touching HTML */
+  .bg-blue-500 {
+    background-color: #0f172a !important;
+    /* Slate-900 */
+  }
+
+  .text-blue-500 {
+    color: #334155 !important;
+    /* Slate-700 for subtle contrast */
+  }
+
+  html.dark .bg-blue-500 {
+    background-color: #334155 !important;
+    /* Slate-700 - visible background for white icon */
+  }
+
+  html.dark .text-blue-500 {
+    color: #94a3b8 !important;
+    /* Slate-400 for subtle contrast in dark mode */
+  }
+
+  .hover\:bg-blue-600:hover {
+    background-color: #1e293b !important;
+    /* slate-800 */
+  }
+
+  .rounded-2xl,
+  .rounded-3xl,
+  .rounded-xl {
+    border-radius: 0.5rem !important;
+    /* lg */
+  }
+
+  .shadow-lg,
+  .shadow-xl {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+    /* sm */
   }
 }
 
 @layer components {
 
-  /* Card */
+  /* Corporate Card */
   .card {
-    @apply bg-white rounded-2xl p-6 shadow-sm border border-slate-100 transition-all duration-300;
+    @apply bg-white rounded-lg p-6 shadow-sm border border-slate-200 transition-all duration-200;
   }
 
   .card:hover {
-    @apply shadow-md -translate-y-1;
+    @apply shadow-md border-slate-300;
   }
 
-  /* Main Card */
+  /* Corporate Main Card */
   .card-main {
-    @apply bg-white rounded-3xl p-8 shadow-lg border-0 text-center relative overflow-hidden transition-transform duration-500;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+    @apply bg-white rounded-xl p-8 shadow-sm border border-slate-200 text-center relative overflow-hidden transition-all duration-300;
+    background: #ffffff;
   }
 
+  /* Clean Input Fields */
   .input-field {
-    @apply w-full px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-50 transition-all duration-200 shadow-sm;
+    @apply w-full px-4 py-2.5 rounded-md bg-white border border-slate-300 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-800 focus:ring-1 focus:ring-slate-800 transition-all duration-150 shadow-sm;
   }
 
-  /* Botões */
+  /* Corporate Buttons */
   .btn-primary {
-    @apply bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-sm hover:shadow active:scale-95;
+    @apply bg-slate-900 hover:bg-slate-800 text-white font-medium py-2.5 px-6 rounded-md transition-all duration-200 shadow-sm hover:shadow active:bg-slate-950;
   }
 }
 
 @layer utilities {
 
-  /* Animações  */
+  /* Subtle Animations */
   .animate-enter {
-    animation: enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: enter 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
 
   .delay-100 {
